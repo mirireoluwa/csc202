@@ -19,6 +19,9 @@ let AppController = class AppController {
     getHello() {
         return this.appService.getHello();
     }
+    getHello2() {
+        return { message: 'Hello World!', title: 'My Greeting App' };
+    }
 };
 exports.AppController = AppController;
 __decorate([
@@ -27,6 +30,13 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", String)
 ], AppController.prototype, "getHello", null);
+__decorate([
+    (0, common_1.Get)('hello2'),
+    (0, common_1.Render)('index.html'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Object)
+], AppController.prototype, "getHello2", null);
 exports.AppController = AppController = __decorate([
     (0, common_1.Controller)(),
     __metadata("design:paramtypes", [app_service_1.AppService])
